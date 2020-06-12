@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            background-color: #232323;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    
+    <!-- Header Container -->
+    <h1 class="display-4 p-5 mb-5 text-center text-success border-bottom border-success">Weight Converter</h1>
+
+    <!-- Main Body Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-lg-6 col-md-8 col-sm-10 mx-auto">
+
+                <!-- Input Area -->
+                <form action="">
+                    <div class="input-group">
+                        <input 
+                        id="weight"
+                        type="number" 
+                        min="0"
+                        class="form-control"
+                        placeholder="Enter Weight">
+
+                        <div class="input-group-append">
+                            <select name="inputType" id="inputType" class="custom-select">
+                                <option value="kilograms" selected>Kilograms</option>
+                                <option value="grams">Grams</option>
+                                <option value="pounds">Pounds</option>
+                                <option value="ounces">Ounces</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Output Area -->
+                <div class="output mt-4" style="visibility: hidden">
+
+                    <!-- Gram Output Card -->
+                    <div class="card p-3 my-2 bg-primary text-white">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="display-5" id="firstOutputName"></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="float-right" id="firstOutputValue"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pounds Output Card -->
+                    <div class="card p-3 my-2 bg-warning">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="display-5" id="secondOutputName"></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="float-right" id="secondOutputValue"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ounces Output Card -->
+                    <div class="card p-3 my-2 bg-danger text-white">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="display-5" id="thirdOutputName"></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="float-right" id="thirdOutputValue"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript Linking -->
+    <script src="converter.js"></script>
+
+</body>
+</html>
